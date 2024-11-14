@@ -1,6 +1,6 @@
 import React from 'react';
 import IconButton from '@mui/material/IconButton';
-import ClearIcon from '@mui/icons-material/Clear';
+// import ClearIcon from '@mui/icons-material/Clear';
 import { Box, Accordion, MenuItem } from '@mui/material';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -11,8 +11,8 @@ import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRou
 
 import { LinksHeader } from '../linksHeader/LinksHeader';
 import { LinkChildren } from '../linkChildren/LinkChildren';
-import { useDispatch } from 'react-redux';
-import { deletefilter } from '../../redux/Slice/links';
+// import { useDispatch } from 'react-redux';
+// import { deletefilter } from '../../redux/Slice/links';
 
 export const LinksGrid = ({
   columns,
@@ -26,7 +26,7 @@ export const LinksGrid = ({
   handleChildSummary,
   onfilterTags
 }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   return (
     <>
@@ -81,7 +81,7 @@ const View = ({
   onDeleteRow,
   onDeleteTags,
   handleChildSummary,
-  children
+  // children
 }) => {
   const [openMenuAccordion, setOpenMenuAccordion] = React.useState(null);
   const [childInput, setChildInput] = React.useState(childrenSummary);
