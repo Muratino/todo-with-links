@@ -113,6 +113,8 @@ export const todoSlice = createSlice({
             valueItemIndex
           ].tags.push(action.payload.value);
           break;
+        default:
+          break;
       }
       localStorage.setItem("links", JSON.stringify(state.links));
     },
