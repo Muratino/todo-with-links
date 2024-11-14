@@ -167,6 +167,8 @@ export const todoSlice = createSlice({
             ...minorStatusArr,
           ];
           break;
+        default:
+          break;
       }
 
       state.todos = newArr;
@@ -204,6 +206,8 @@ export const todoSlice = createSlice({
             ...task,
             ...minorStatusArr,
           ];
+          break;
+        default:
           break;
       }
 
@@ -251,6 +255,8 @@ export const todoSlice = createSlice({
           ];
           state.filterTodos = [action.payload, ...minorStatusArr];
           break;
+        default:
+          break;
       }
       localStorage.setItem("todos", JSON.stringify(state.todos));
     },
@@ -292,6 +298,8 @@ export const todoSlice = createSlice({
             (el) => el.assign === action.payload.value
           );
           state.filterTodos = [...filteredAssignArr];
+          break;
+        default:
           break;
       }
     },
