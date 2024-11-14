@@ -275,21 +275,21 @@ export const todoSlice = createSlice({
         case "date":
           state.filterTodos = [...state.todos];
           const filteredDateArr = state.filterTodos.filter(
-            (el) => el.date == action.payload.value
+            (el) => el.date === action.payload.value
           );
           state.filterTodos = [...filteredDateArr];
           break;
         case "status":
           state.filterTodos = [...state.todos];
           const filteredStatusArr = state.filterTodos.filter(
-            (el) => el.status == action.payload.value
+            (el) => el.status === action.payload.value
           );
           state.filterTodos = [...filteredStatusArr];
           break;
         case "assign":
           state.filterTodos = [...state.todos];
           const filteredAssignArr = state.filterTodos.filter(
-            (el) => el.assign == action.payload.value
+            (el) => el.assign === action.payload.value
           );
           state.filterTodos = [...filteredAssignArr];
           break;
@@ -299,7 +299,7 @@ export const todoSlice = createSlice({
       state.isFiltering = false;
       state.filterTodos = [];
       for (let key in state.createTask) {
-        key == "id"
+        key === "id"
           ? (state.createTask[key] = null)
           : (state.createTask[key] = "");
       }
